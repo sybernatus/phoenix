@@ -1,10 +1,12 @@
 {
-  "name": ".",
+  "name": "phoenix",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {},
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "yarn": "^1.22.19"
+  },
   "devDependencies": {
     "@nrwl/cli": "14.4.3",
     "@nrwl/js": "14.4.3",
