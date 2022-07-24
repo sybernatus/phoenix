@@ -2,7 +2,9 @@
   "name": "phoenix",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "chmod": "find . -name '*.bash' -type f -exec chmod +x {} \\;"
+  },
   "private": true,
   "dependencies": {
     "yarn": "^1.22.19"
