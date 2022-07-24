@@ -3,7 +3,6 @@ set -e
 set -o pipefail
 [[ "${KREDUL_DEBUG}" = "true" ]] && set -x || set +x
 
-
 kind_get_cluster_name () {
   echo -n "phoenix-local"
 }

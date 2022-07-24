@@ -50,7 +50,7 @@ if [[ $# -gt 0 ]] ; then
         exit 0
         ;;
       --registry | -r)
-        clean_install_registry "${registryName}" "${registryPort}"
+        "clean_install_registry" "${registryName}" "${registryPort}"
         shift
         break
         ;;
@@ -71,3 +71,6 @@ log_write_section "Remove cluster - ${clusterName}"
 log_write_section "Create cluster - ${clusterName}"
 clusterConfig=$( "tree_get_kind_config_path" )
 "kind" create cluster --name "${clusterName}" --config  "${clusterConfig}"
+
+log_write_section "Deploy Ingress controller"
+"kubectl" apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
