@@ -1,5 +1,9 @@
 {
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
-  "projects": {}
+  "projects": {
+    "my-hexa": "apps/my-hexa",
+    "nest-pattern": "libs/nest-pattern",
+    "nest-pattern-e2e": "apps/nest-pattern-e2e"
+  }
 }

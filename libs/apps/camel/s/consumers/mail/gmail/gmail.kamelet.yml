@@ -1,0 +1,18 @@
+apiVersion: camel.apache.org/v1alpha1
+kind: Kamelet
+metadata:
+  name: telegram-text-source
+spec:
+  template:
+    from:
+      uri: telegram:bots
+      parameters:
+        authorizationToken: "#property:botToken"
+      steps:
+      - convert-body-to:
+          type: "java.lang.String"
+          type-class: "java.lang.String"
+          charset: "UTF8"
+      - filter:
+          simple: "${body} != null"
+      - log: "${body}"

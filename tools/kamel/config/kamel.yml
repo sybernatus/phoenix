@@ -1,0 +1,3 @@
+kamel:
+  install:
+    namespace: apache-camel
